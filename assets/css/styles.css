@@ -64,6 +64,7 @@ header{
     flex: 1 0 auto;
     font-weight: 700;
     font-size: 18px;
+    list-style-type: none;
 }
 .navbar-nav .nav-item{
     border-bottom: 2px solid var(--text-black);
@@ -148,7 +149,6 @@ header{
     font-size: 26px;
     font-style: italic;
     font-family: 'openSans', Arial, Helvetica, sans-serif;
-    margin-bottom: -1em;
 }
 
 .about-desc-wrapper .about-desc-text{
@@ -263,46 +263,42 @@ footer .footer-heart-icon{
 
 @keyframes heartBeat {
     to {
-       -webkit-transform: scale(1.4);
+        -webkit-transform: scale(1.4);
           -moz-transform: scale(1.4);
           -o-transform: scale(1.4);
           -ms-transform: scale(1.4);
           transform: scale(1.4);
-    }
+        }
    
-}
+    }
    
    @-moz-keyframes heartBeat {
         to {
         -moz-transform: scale(1.4);
         transform: scale(1.4);
         }
-   
-   }
+    }
    
    @-webkit-keyframes heartBeat{
         to {
         -webkit-transform: scale(1.4);
         transform: scale(1.4);
         }
-   
-   }
+    }
    
    @-ms-keyframes heartBeat{
         to {
         -ms-transform: scale(1.4);
         transform: scale(1.4);
         }
-   
-   }
+    }
    
    @-o-keyframes heartBeat{
         to {
         -o-transform: scale(1.4);
         transform: scale(1.4);
         }
-    
-   }
+    }
    
 
 /* Sign up page */
@@ -354,6 +350,15 @@ body.sign-up-body::before{
     align-items: center;
     padding: 25px;
 }
+
+.form-container .back-btn{
+    align-self: start;
+}
+
+.form-container .back-btn:hover{
+    text-decoration: underline;
+}
+
 
 .form-heading-wrapper{
     padding: 0 10px;
@@ -420,7 +425,37 @@ body.sign-up-body::before{
 @media (max-width: 768px) {
     .body-main-container .body-element{
         height: max-content !important;
+        margin: 30px auto;
     }
+
+    #home .fupre-text-wrapper{
+        display: flex;
+        justify-content: center;
+        font-size: 3.7em;
+    }
+
+    #home .click-icon-wrapper{
+        right: 10%;
+    }
+
+    #home .graduate-svg{
+        height: 450px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .get-reg-wrapper .get-reg-text{
+        font-size: 30px;
+    }
+
+    #sign-in{
+        margin-bottom: 0;
+    }
+
+    .login-btn-container{
+        width: 100%;
+    }
+    
     /* Sign-up page */
     .sign-up-form-wrapper{
         height: 90vh;
