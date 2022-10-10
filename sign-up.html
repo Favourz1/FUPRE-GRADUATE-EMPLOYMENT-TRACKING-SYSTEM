@@ -25,7 +25,7 @@
 <body class="sign-up-body">
 
     <div class="sign-up-form-wrapper">
-        <form action="" class="form-container">
+        <form action="" class="form-container needs-validation">
             <div class="back-btn"><a href="index.html">
                     <svg class="back-to-home-icon" width="30px" height="30px" viewBox="0 0 48 48" fill="#173554"
                         xmlns="http://www.w3.org/2000/svg">
@@ -48,11 +48,18 @@
                     <input type="email" class="form-control" id="sign-up-email" placeholder="graduate@example.com"
                         required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     <label for="sign-up-email">Email Address</label>
+                    <div class="invalid-feedback">
+                        Please choose a correct email.
+                    </div>
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3 has-validation">
                     <input type="password" class="form-control" id="sign-up-pwd" placeholder="Password" required
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <label for="sign-up-pwd">Password</label>
+                    <div class="invalid-feedback">
+                        Choose a password that contains a minimum of 8 characters, number, lowercase 7 uppercase
+                        letters.
+                    </div>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="tel" class="form-control" id="sign-up-tel" placeholder="Phone Number">
