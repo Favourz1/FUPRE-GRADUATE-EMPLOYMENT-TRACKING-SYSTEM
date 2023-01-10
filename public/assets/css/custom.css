@@ -1,0 +1,15 @@
+.datepicker {
+    z-index: 9999 !important;
+}
+
+.zoom {
+    transition: transform .2s ease-in-out;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
