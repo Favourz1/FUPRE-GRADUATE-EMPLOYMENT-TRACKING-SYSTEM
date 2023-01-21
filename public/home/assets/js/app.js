@@ -7,5 +7,4 @@ function changeHeartIconColor() {
     footerHeartIcon.style.color = DOCUMENT_COLORS[randomColor];
 }
 
-
-setInterval(changeHeartIconColor, 450)
+setInterval(changeHeartIconColor, 450);

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUPRE-GRADUATE-EMPLOYMENT-TRACKING-SYSTEM</title>
+    <title>{{ config('app.name') }}</title>
     <!-- Alpine Js cdn -->
     <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Bootstrap 5 cdn links -->
@@ -240,7 +240,7 @@
                         <div class="get-reg-text">
                             GET REGISTERED!
                         </div>
-                        <a class="login-btn-container" href="sign-up.html">
+                        <a class="login-btn-container" href="{{ route('register') }}">
                             <div class="login-btn-wrapper">
                                 <div class="walk-through-btn-text me-3">Let's Walk You Through </div> <span><svg
                                         xmlns="http://www.w3.org/2000/svg" class="login-right-arrow-svg"

@@ -18,6 +18,10 @@ class Student extends Model implements HasMedia
         $this->addMediaCollection('students');
     }
 
+    public function user() {
+        return $this->belongsTo(Student::class);
+    }
+
     public function getHasMediaAttribute(): bool
     {
         return $this->hasMedia('students');
@@ -36,5 +40,13 @@ class Student extends Model implements HasMedia
 
     public function getFullNameAttribute() {
         return $this->first_name . " {$this->other_name} " . $this->last_name;;
+    }
+
+    public function jobProfile() {
+        return $this->hasOne(JobProfile::class);
+    }
+
+    public function jobReferee() {
+        return $this->hasOne(JobReferee::class);
     }
 }

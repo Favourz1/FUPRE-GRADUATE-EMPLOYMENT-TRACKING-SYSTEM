@@ -5,7 +5,7 @@
             <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
         </div>
         <div>
-            <h5 class="logo-text">{{ config('app.name') }}</h5>
+            <h5 class="logo-text">{{ config('app.short_name') }}</h5>
         </div>
         <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div>
@@ -13,36 +13,30 @@
     <!--navigation-->
     <ul class="metismenu" id="menu">
         <li>
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('dashboard.profile') }}">
                 <div class="parent-icon"><i class='bx bx-home-circle'></i>
                 </div>
-                <div class="menu-title">Dashboard</div>
+                <div class="menu-title">Profile</div>
             </a>
         </li>
         <li>
-            <a href="{{ route('students.index') }}">
-                <div class="parent-icon"><i class='bx bx-user'></i>
-                </div>
-                <div class="menu-title">Students</div>
+            <a href="{{ route('dashboard.job-profile') }}">
+                <div class="parent-icon"><i class='bx bx-briefcase'></i></div>
+                <div class="menu-title">Job Profile</div>
             </a>
         </li>
-        {{-- <li>
-            <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-cart'></i>
-                </div>
-                <div class="menu-title">eCommerce</div>
+        <li>
+            <a href="{{ route('dashboard.job-referee') }}">
+                <div class="parent-icon"><i class='bx bx-plus'></i></div>
+                <div class="menu-title">Job Referee</div>
             </a>
-            <ul>
-                <li> <a href="ecommerce-products.html"><i class="bx bx-right-arrow-alt"></i>Products</a>
-                </li>
-                <li> <a href="ecommerce-products-details.html"><i class="bx bx-right-arrow-alt"></i>Product Details</a>
-                </li>
-                <li> <a href="ecommerce-add-new-products.html"><i class="bx bx-right-arrow-alt"></i>Add New Products</a>
-                </li>
-                <li> <a href="ecommerce-orders.html"><i class="bx bx-right-arrow-alt"></i>Orders</a>
-                </li>
-            </ul>
-        </li> --}}
+        </li>
+        <li>
+            <a href="{{ route('dashboard.change-password') }}">
+                <div class="parent-icon"><i class='bx bx-lock'></i></div>
+                <div class="menu-title">Change Password</div>
+            </a>
+        </li>
     </ul>
     <!--end navigation-->
 </div>

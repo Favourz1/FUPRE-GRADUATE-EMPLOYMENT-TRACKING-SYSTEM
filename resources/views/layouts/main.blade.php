@@ -34,6 +34,7 @@
 
         @include('layouts.header')
 		<div class="page-wrapper">
+            @include('partials.alert')
             @yield('content')
 		</div>
 

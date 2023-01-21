@@ -1,56 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-	<!--favicon-->
-	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
-	<!--plugins-->
-	<link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-	<link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-	<link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
-	<!-- Bootstrap CSS -->
-	<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('assets/css/bootstrap-extended.css') }}" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
-	<link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
-	<title>@yield('title', config('app.name')) - {{ config('app.name') }}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title') - {{ config('app.name') }}</title>
+    <!-- Alpine Js cdn -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Bootstrap 5 cdn links -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="{{ asset('home/assets/images/favicon.png') }}">
+    <!-- Font awesome cdn -->
+    <script src="https://kit.fontawesome.com/1a015cf62c.js" crossorigin="anonymous"></script>
+    <!-- Css Links -->
+    <link rel="stylesheet" href="{{ asset('home/assets/css/styles.css') }}">
 </head>
 
-<body class="bg-login">
-	<!--wrapper-->
+<body class="sign-up-body">
     @yield('content')
-	<!--end wrapper-->
-	<!-- Bootstrap JS -->
-	<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-	<!--plugins-->
-	<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
-	<!--Password show & hide js -->
-	<script>
-		$(document).ready(function () {
-			$("#show_hide_password a").on('click', function (event) {
-				event.preventDefault();
-				if ($('#show_hide_password input').attr("type") == "text") {
-					$('#show_hide_password input').attr('type', 'password');
-					$('#show_hide_password i').addClass("bx-hide");
-					$('#show_hide_password i').removeClass("bx-show");
-				} else if ($('#show_hide_password input').attr("type") == "password") {
-					$('#show_hide_password input').attr('type', 'text');
-					$('#show_hide_password i').removeClass("bx-hide");
-					$('#show_hide_password i').addClass("bx-show");
-				}
-			});
-		});
-	</script>
-	<!--app JS-->
-	<script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
 
 </html>
