@@ -11,7 +11,6 @@
         </div>
     </div>
     <!--navigation-->
-    @if(auth()->user()->role ==)
     <ul class="metismenu" id="menu">
         <li>
             <a href="{{ route('dashboard.profile') }}">
